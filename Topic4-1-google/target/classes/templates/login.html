@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>CST-339 Spring Boot Activity Application</title>
+	</head>
+	<body>
+		<form action="#" th:action="@{doLogin}" th:object="${loginModel}" method="post">
+			<table>
+				<tr>
+					<td>
+						User Name:
+					</td>
+					<td>
+						<input type="text" th:field="*{username}" >
+					</td>
+				</tr>		
+				<tr>
+					<td>
+						Password:
+					</td>
+					<td>
+						<input type="password" th:field="*{password}" >
+					</td>
+				</tr>		
+				<tr>
+					<td colspan="2">
+						<input type="submit" value="Submit" />
+					</td>
+				</tr>			
+			</table>		
+		</form>	
+	</body>
+</html>
